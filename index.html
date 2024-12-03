@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator BMI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container0">
+        <p>Selamat datang 😊 </p>
+    </div>
+  <div class="container">
+    <h1>Kalkulator BMI</h1>
+    <form id="bmi-form">
+      <div class="form-group">
+        <label for="height">Tinggi Badan (cm):</label>
+        <input type="number" id="height" placeholder="Masukkan tinggi badan" required>
+      </div>
+      <div class="form-group">
+        <label for="weight">Berat Badan (kg):</label>
+        <input type="number" id="weight" placeholder="Masukkan berat badan" required>
+      </div>
+      <div class="form-group">
+        <label>Jenis Kelamin:</label>
+        <div>
+          <input type="radio" id="male" name="gender" value="male" required>
+          <label for="male">Pria</label>
+        </div>
+        <div>
+          <input type="radio" id="female" name="gender" value="female" required>
+          <label for="female">Wanita</label>
+        </div>
+      </div>
+      <button type="button" id="calculate-btn">Hitung BMI</button>
+    </form>
+    <div class="result">
+      <h2 id="bmi-result"></h2>
+      <p id="bmi-category"></p>
+    </div>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>
