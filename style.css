@@ -10,24 +10,22 @@ body {
     height: 100vh;
   }
   
-/*Opening*/
-.opening {body {
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    background: linear-gradient(1deg, #ffffff, rgb(111, 248, 255));
-    color: #000000;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .container0{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-     font-size: 40px;
-    animation: open 2s ease-out forwards;
-  }
+  .welcome-header {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    animation: slideDownFadeIn 1.5s ease-out forwards,
+               slideUpFadeOut 1.5s ease-in forwards 3s;
+}
+
   .container {
     background: #9227278a;
     padding: 20px 30px;
@@ -78,6 +76,11 @@ body {
     border-radius: 4px;
     cursor:grab;
     font-size: 16px;
+  }
+
+  button:hover{
+    background: #ec3939;
+    box-shadow: 0 0 23px#ff0000;
   }
   
   .result {
@@ -120,158 +123,22 @@ footer{
       font-size:20px;
       text-align:justify;
     }
-}
 
-
-@keyframes leMovingBackFromRight {
-  0% { transform: translateX(100vw); opacity: 0; }
-  50% { transform: translateX(-10px); opacity: 1; }
-  100% { transform: translateX(0); opacity: 1; }
-}
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(1deg, #ffffff, rgb(164, 233, 236));
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-  z-index: 9999;
-  animation: fadeOut 1.5s forwards;
-  animation-delay: 1s;
-  pointer-events: none;
-}
-
-.opening p{
-  font-size: 2rem;
-  font-weight: bold;
-  color: #000000; 
-  font-family: 'Courier New', monospace;
-  text-align: center;
-  margin-top: 50px;
-  text-shadow: 0 0 5px #ffffff, 0 0 10px #0fe7ff, 0 0 20px #fcfdff;
-  display: inline-block;
-  white-space: nowrap;
-  animation: leMovingBackFromRight 1.5s ease-out forwards;
-}
-
-
-  .container0{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-     font-size: 40px;
-    animation: open 2s ease-out forwards;
-  }
-  .container {
-    background: #9227278a;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 23px 20px rgba(255, 0, 0, 0.488);
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  h1 {
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 25px;
-    text-align: left;
-  }
-  .form-group div {
-    margin-top: 8px;
-  }
-  
-  input[type="radio"] {
-    width: 20px;
-    height: 20px;
-    
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #0055ff;
-    border-radius: 4px;
-  }
-  
-  button {
-    width: 100%;
-    padding: 10px;
-    background:linear-gradient(1deg, #ffffff, rgb(164, 233, 236));
-    color: #000000;
-    border: none;
-    border-radius: 4px;
-    cursor:grab;
-    font-size: 16px;
-  }
-  
-  .result {
-    margin-top: 20px;
-  }
-  
-  .result h2 {
-    margin: 0;
-    font-size: 24px;
-  }
-  
-  .result p {
-    margin: 5px 0 0;
-    font-size:18px;
-  }
-
-  .element {
-  forced-color-adjust: none;
-}
-
-footer{
-  font-size: 20px;
-  text-align: center;
-}
-@keyframes open {
-    from { width: 0; }
-    to { width: 10%; }
-}
-
-@media  (max-width: 769px) {
-  .container0{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-     font-size: 20px;
-    animation: open 2s ease-out forwards;
-    text-align: center;
-    justify-content: flex;
-  }
-
-  .opening{
-    pointer-events: none;
-  }
-  .opening p{
-      font-size: 16px;
-      font-weight: bold;
-      color: #000000; 
-      font-family: 'Courier New', monospace;
+    .welcome-header {
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.9);
+      padding: 10px 20px;
+      border-radius: 8px;
       text-align: center;
-      margin-top: 50px;
-      text-shadow: 0 0 5px #ffffff, 0 0 10px #0fe7ff, 0 0 20px #fcfdff;
-      display: inline-block;
-      white-space: nowrap;
-      animation: leMovingBackFromRight 1.5s ease-out forwards;
-    }
-
-    footer{
-      font-size:20px;
-      text-align:justify;
-    }
+      font-size: 10px;
+      font-weight: bold;
+      opacity: 0;
+      animation: slideDownFadeIn 1.5s ease-out forwards,
+                 slideUpFadeOut 1.5s ease-in forwards 3s;
+  }
 }
 
 
@@ -279,4 +146,27 @@ footer{
   0% { transform: translateX(100vw); opacity: 0; }
   50% { transform: translateX(-10px); opacity: 1; }
   100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideDownFadeIn {
+  0% {
+      top: -50px;
+      opacity: 0;
+  }
+  100% {
+      top: 10px;
+      opacity: 1;
+  }
+}
+
+/* Animasi Menghilang */
+@keyframes slideUpFadeOut {
+  0% {
+      top: 10px;
+      opacity: 1;
+  }
+  100% {
+      top: -50px;
+      opacity: 0;
+  }
 }
