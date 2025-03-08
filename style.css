@@ -24,8 +24,8 @@ body {
   color: white;
   font-size: 24px;
   z-index: 9999;
-  animation: fadeOut 2.5s forwards;
-  animation-delay: 2s;
+  animation: fadeOut 1.5s forwards;
+  animation-delay: 1s;
   pointer-events: none;
 }
 
@@ -128,7 +128,7 @@ footer{
 }
 @keyframes open {
     from { width: 0; }
-    to { width: 25%; }
+    to { width: 10%; }
 }
 
 @media  (max-width: 769px) {
