@@ -1,5 +1,6 @@
 document.getElementById("calculate-btn").addEventListener("click", function () {
-    const height = parseFloat(document.getElementById("height").value) / 100; // Convert cm to meters
+  const name = document.getElementById("name").value.trim(); // Ambil nama user 
+  const height = parseFloat(document.getElementById("height").value) / 100; // Convert cm to meters
     const weight = parseFloat(document.getElementById("weight").value);
     const gender = document.querySelector('input[name="gender"]:checked');
   
@@ -25,7 +26,7 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
     // Tambahkan keterangan berdasarkan jenis kelamin
     const genderText = gender.value === "male" ? "Pria" : "Wanita";
   
-    document.getElementById("bmi-result").textContent = `BMI Anda: ${bmi}`;
+    document.getElementById("bmi-result").textContent = `Halo, ${name}! BMI Anda: ${bmi}`;
     document.getElementById("bmi-category").textContent = `Kategori: ${category} (${genderText})`;
 
   });
