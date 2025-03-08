@@ -11,7 +11,123 @@ body {
   }
   
 /*Opening*/
-.opening {
+.opening {body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background: linear-gradient(1deg, #ffffff, rgb(111, 248, 255));
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container0{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-size: 40px;
+    animation: open 2s ease-out forwards;
+  }
+  .container {
+    background: #9227278a;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 23px 20px rgba(255, 0, 0, 0.488);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+    text-align: left;
+  }
+  .form-group div {
+    margin-top: 8px;
+  }
+  
+  input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #0055ff;
+    border-radius: 4px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background:linear-gradient(1deg, #ffffff, rgb(164, 233, 236));
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor:grab;
+    font-size: 16px;
+  }
+  
+  .result {
+    margin-top: 20px;
+  }
+  
+  .result h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .result p {
+    margin: 5px 0 0;
+    font-size:18px;
+  }
+
+  .element {
+  forced-color-adjust: none;
+}
+
+footer{
+  font-size: 20px;
+  text-align: center;
+}
+@keyframes open {
+    from { width: 0; }
+    to { width: 10%; }
+}
+
+@media  (max-width: 769px) {
+  .container0{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-size: 20px;
+    animation: open 2s ease-out forwards;
+    text-align: center;
+    justify-content: flex;
+  }
+
+    footer{
+      font-size:20px;
+      text-align:justify;
+    }
+}
+
+
+@keyframes leMovingBackFromRight {
+  0% { transform: translateX(100vw); opacity: 0; }
+  50% { transform: translateX(-10px); opacity: 1; }
+  100% { transform: translateX(0); opacity: 1; }
+}
   position: fixed;
   top: 0;
   left: 0;
