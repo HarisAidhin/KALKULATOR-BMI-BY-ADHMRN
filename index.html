@@ -5,48 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kalkulator BMI</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
+  <div class="floating-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
 
-  <header class="welcome-header">
+  <div class="welcome-message animate__animated animate__fadeInDown">
     <h2>Selamat datang, semoga Anda sehat yaa :)</h2>
-  </header>
+  </div>
 
-  <div class="container">
-    <h1>Kalkulator BMI</h1>
-    <div class="form-group">
-      <label for="name">Nama:</label>
-      <input type="text" id="name" placeholder="Masukkan nama Anda" required>
-    </div>
-    <form id="bmi-form">
-      <div class="form-group">
-        <label for="height">Tinggi Badan (cm):</label>
-        <input type="number" id="height" placeholder="Masukkan tinggi badan" required>
+  <div class="container animate__animated animate__zoomIn">
+    <div class="card">
+      <div class="card-header">
+        <h1>Kalkulator BMI</h1>
       </div>
-      <div class="form-group">
-        <label for="weight">Berat Badan (kg):</label>
-        <input type="number" id="weight" placeholder="Masukkan berat badan" required>
-      </div>
-      <div class="form-group">
-        <label>Jenis Kelamin:</label>
-        <div>
-          <input type="radio" id="male" name="gender" value="male" required>
-          <label for="male">Pria</label>
+      <div class="card-body">
+        <div class="form-group">
+          <label for="name">Nama:</label>
+          <input type="text" id="name" placeholder="Masukkan nama Anda" required>
         </div>
-        <div>
-          <input type="radio" id="female" name="gender" value="female" required>
-          <label for="female">Wanita</label>
+        <form id="bmi-form">
+          <div class="form-group">
+            <label for="height">Tinggi Badan (cm):</label>
+            <input type="number" id="height" placeholder="Masukkan tinggi badan" required>
+          </div>
+          <div class="form-group">
+            <label for="weight">Berat Badan (kg):</label>
+            <input type="number" id="weight" placeholder="Masukkan berat badan" required>
+          </div>
+          <div class="form-group radio-group">
+            <label>Jenis Kelamin:</label>
+            <div class="radio-options">
+              <label class="radio-label">
+                <input type="radio" id="male" name="gender" value="male" required>
+                <span class="radio-custom"></span>
+                Pria
+              </label>
+              <label class="radio-label">
+                <input type="radio" id="female" name="gender" value="female" required>
+                <span class="radio-custom"></span>
+                Wanita
+              </label>
+            </div>
+          </div>
+          <button type="button" id="calculate-btn" class="btn-pulse">
+            <span>Hitung BMI</span>
+          </button>
+        </form>
+      </div>
+      <div class="card-footer result">
+        <div class="result-content">
+          <h2 id="bmi-result"></h2>
+          <p id="bmi-category"></p>
         </div>
       </div>
-      <button type="button" id="calculate-btn">Hitung BMI</button>
-    </form>
-    <div class="result">
-      <h2 id="bmi-result"></h2>
-      <p id="bmi-category"></p>
     </div>
   </div>
-  <script src="script.js" defer></script>
 
-  <footer>By HarisAR</footer>
+  <footer class="animate__animated animate__fadeInUp">
+    <p>By HarisAR</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
